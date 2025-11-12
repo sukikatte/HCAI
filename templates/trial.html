@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+    <h2>正式试题 {{ trial_number }} / {{ total }}</h2>
+    <p class="hint">请在阅读信息后，依据主观感受对解释进行评分。</p>
+    <div class="trial-box">
+        <p><strong>场景描述：</strong>{{ trial.description }}</p>
+        <p><strong>AI 判断：</strong>{{ trial.ai_decision }}</p>
+        <p><strong>真实反馈：</strong>{{ trial.ground_truth }}</p>
+        <p><strong>系统解释：</strong>{{ trial.explanation }}</p>
+    </div>
+    <form method="post" class="rating-form">
+        {% include "rating_fields.html" %}
+        <button type="submit" class="primary-button">
+            {% if trial_number == total %}提交并进入总结{% else %}下一题{% endif %}
+        </button>
+    </form>
+</section>
+{% endblock %}
+

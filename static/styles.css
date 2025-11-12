@@ -1,0 +1,143 @@
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #f4f6fa;
+    color: #30343f;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header,
+.site-footer {
+    background-color: #1f3c88;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.content {
+    max-width: 840px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.form-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d0d4e4;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-group.checkbox label {
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    line-height: 1.6;
+}
+
+.form-group.checkbox input[type="checkbox"] {
+    margin-top: 0.35rem;
+}
+
+.timeline {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.timeline li {
+    margin-bottom: 0.5rem;
+}
+
+.primary-button {
+    background-color: #1f3c88;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.9rem 1.6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.primary-button:hover {
+    background-color: #162b5c;
+}
+
+.hint {
+    background: #e8f0fe;
+    border-left: 4px solid #1f3c88;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    color: #1f3c88;
+}
+
+.trial-box {
+    border: 1px solid #d0d4e4;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    background: #fdfdff;
+    line-height: 1.7;
+}
+
+.rating-group {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.rating-group fieldset {
+    border: 1px solid #d0d4e4;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+}
+
+.rating-group legend {
+    font-weight: 600;
+    padding: 0 0.5rem;
+}
+
+.rating-group label {
+    margin-right: 0.75rem;
+}
+
+.rating-group input[type="radio"] {
+    margin-right: 0.3rem;
+}
+
+.flash-messages {
+    background-color: #ffe9e6;
+    border: 1px solid #ffb8a8;
+    color: #a7342d;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.debrief-form textarea {
+    margin-bottom: 1.5rem;
+}
+

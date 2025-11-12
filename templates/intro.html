@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+    <h2>欢迎参加实验</h2>
+    <p>
+        本实验旨在研究当 AI 发生不同类型错误并给出不同质量解释时，人类对系统的信任与评价。实验全程约需 15-20 分钟。请务必仔细阅读以下说明并填写必要信息。
+    </p>
+    <form method="post" class="form-grid">
+        <div class="form-group checkbox">
+            <label>
+                <input type="checkbox" name="consent" value="yes">
+                我已阅读并同意参与本研究，理解数据将匿名保存且可随时退出。
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="participant_id">参与者编号（可使用学号后四位或自定义代号）</label>
+            <input type="text" id="participant_id" name="participant_id" required>
+        </div>
+        <div class="form-group">
+            <label for="control_var">自评：我对 AI 系统的熟悉程度（1=完全不熟悉，7=非常熟悉）</label>
+            <input type="number" id="control_var" name="control_var" min="1" max="7" placeholder="1 - 7">
+        </div>
+        <div class="form-group">
+            <label>实验流程概述</label>
+            <ul class="timeline">
+                <li>填写知情同意与基础信息（约 2 分钟）</li>
+                <li>完成 2 道练习题，熟悉界面与评分方式（约 3 分钟）</li>
+                <li>完成 16 道正式试题，每题包含 AI 判断、真实反馈与解释（约 12 分钟）</li>
+                <li>实验结束后可留下简短反馈（约 1 分钟）</li>
+            </ul>
+        </div>
+        <button type="submit" class="primary-button">开始练习</button>
+    </form>
+</section>
+{% endblock %}
+

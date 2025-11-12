@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+    <h2>实验总结</h2>
+    <p>
+        您已完成全部 16 道正式试题，非常感谢！如果愿意，可以在下方填写任何额外反馈（可选）。点击“提交结果”后，系统将保存您的评分数据并结束实验。
+    </p>
+    <form method="post" class="debrief-form">
+        <label for="comment">额外反馈（可选）</label>
+        <textarea id="comment" name="comment" rows="4" placeholder="可填写对体验的感受或建议……"></textarea>
+        <button type="submit" class="primary-button">提交结果</button>
+    </form>
+</section>
+{% endblock %}
+

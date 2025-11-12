@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+    <h2>练习题 {{ step }} / {{ total }}</h2>
+    <p class="hint">请阅读下方情境，并按照 1-7 分制对解释进行评分。练习阶段不记录数据，仅帮助您熟悉操作。</p>
+    <div class="trial-box">
+        <p><strong>场景描述：</strong>{{ trial.description }}</p>
+        <p><strong>AI 判断：</strong>{{ trial.ai_decision }}</p>
+        <p><strong>真实反馈：</strong>{{ trial.ground_truth }}</p>
+        <p><strong>系统解释：</strong>{{ trial.explanation }}</p>
+    </div>
+    <form method="post" class="rating-form">
+        {% include "rating_fields.html" %}
+        <button type="submit" class="primary-button">
+            {% if step == total %}进入正式试验{% else %}下一题{% endif %}
+        </button>
+    </form>
+</section>
+{% endblock %}
+

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+    <h2>实验完成</h2>
+    <p>感谢您的参与！您的回答已经成功保存。</p>
+    {% if data_file %}
+        <p>数据文件已存储在服务器：<code>{{ data_file }}</code></p>
+        {% if comment_file %}
+            <p>文字反馈文件：<code>{{ comment_file }}</code></p>
+        {% endif %}
+    {% else %}
+        <p>如需确认数据存储情况，请联系研究负责人。</p>
+    {% endif %}
+</section>
+{% endblock %}
+
