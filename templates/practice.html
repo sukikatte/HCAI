@@ -1,18 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
 <section class="card">
-    <h2>练习题 {{ step }} / {{ total }}</h2>
-    <p class="hint">请阅读下方情境，并按照 1-7 分制对解释进行评分。练习阶段不记录数据，仅帮助您熟悉操作。</p>
+    <h2>Practice Trial {{ step }} / {{ total }}</h2>
+    <p class="hint">Review the scenario below and rate the explanation using the 1–7 scale. Practice responses are not saved; they simply help you learn the process.</p>
+    <p class="scale-note">Scale reference: choose 1 for the lowest possible rating and 7 for the highest possible rating.</p>
     <div class="trial-box">
-        <p><strong>场景描述：</strong>{{ trial.description }}</p>
-        <p><strong>AI 判断：</strong>{{ trial.ai_decision }}</p>
-        <p><strong>真实反馈：</strong>{{ trial.ground_truth }}</p>
-        <p><strong>系统解释：</strong>{{ trial.explanation }}</p>
+        <p><strong>Scenario:</strong> {{ trial.description }}</p>
+        <p><strong>AI Decision:</strong> {{ trial.ai_decision }}</p>
+        <p><strong>AI Explanation:</strong> {{ trial.explanation }}</p>
+        <p><strong>Ground Truth:</strong> {{ trial.ground_truth }}</p>
     </div>
     <form method="post" class="rating-form">
         {% include "rating_fields.html" %}
         <button type="submit" class="primary-button">
-            {% if step == total %}进入正式试验{% else %}下一题{% endif %}
+            {% if step == total %}Begin Study Trials{% else %}Next Practice{% endif %}
         </button>
     </form>
 </section>

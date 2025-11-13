@@ -1,18 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
 <section class="card">
-    <h2>正式试题 {{ trial_number }} / {{ total }}</h2>
-    <p class="hint">请在阅读信息后，依据主观感受对解释进行评分。</p>
+    <h2>Study Trial {{ trial_number }} / {{ total }}</h2>
+    <p class="hint">Read each section carefully, then rate the explanation based on your own judgment.</p>
+    <p class="scale-note">Scale reference: choose 1 for the lowest possible rating and 7 for the highest possible rating.</p>
     <div class="trial-box">
-        <p><strong>场景描述：</strong>{{ trial.description }}</p>
-        <p><strong>AI 判断：</strong>{{ trial.ai_decision }}</p>
-        <p><strong>真实反馈：</strong>{{ trial.ground_truth }}</p>
-        <p><strong>系统解释：</strong>{{ trial.explanation }}</p>
+        <p><strong>Scenario:</strong> {{ trial.description }}</p>
+        <p><strong>AI Decision:</strong> {{ trial.ai_decision }}</p>
+        <p><strong>AI Explanation:</strong> {{ trial.explanation }}</p>
+        <p><strong>Ground Truth:</strong> {{ trial.ground_truth }}</p>
     </div>
     <form method="post" class="rating-form">
         {% include "rating_fields.html" %}
         <button type="submit" class="primary-button">
-            {% if trial_number == total %}提交并进入总结{% else %}下一题{% endif %}
+            {% if trial_number == total %}Submit & Continue{% else %}Next Trial{% endif %}
         </button>
     </form>
 </section>

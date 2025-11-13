@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ title if title else "人机交互实验" }}</title>
+    <title>{{ title if title else "Human-AI Explanation Study" }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
 <header class="site-header">
-    <h1>人机协作解释质量实验</h1>
+    <h1>Human-AI Explanation Quality Study</h1>
 </header>
 <main class="content">
     {% with messages = get_flashed_messages() %}
@@ -22,7 +22,7 @@
     {% block content %}{% endblock %}
 </main>
 <footer class="site-footer">
-    <p>感谢您的参与。</p>
+    <p>Thank you for taking part.</p>
 </footer>
 </body>
 </html>

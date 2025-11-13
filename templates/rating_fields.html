@@ -1,64 +1,64 @@
-<div class="rating-group">
+<div class="rating-group" aria-label="Explanation rating scale from 1 equals very low to 7 equals very high">
     <fieldset>
-        <legend>清晰度：该解释的用词和表述非常清晰、容易理解。（1=极低，7=极高）</legend>
+        <legend><strong>Clarity:</strong> <span class="legend-desc">The explanation was clear and easy to understand.</span></legend>
         {% for value in range(1, 8) %}
-            <label>
+            <label class="choice-pill">
                 <input type="radio" name="clarity" value="{{ value }}">
-                {{ value }}
+                <span>{{ value }}</span>
             </label>
         {% endfor %}
     </fieldset>
     <fieldset>
-        <legend>充分性：该解释提供了足够的信息，足以支撑当前错误判断。（1=极低，7=极高）</legend>
+        <legend><strong>Sufficiency:</strong> <span class="legend-desc">The explanation provided enough information to justify the AI error.</span></legend>
         {% for value in range(1, 8) %}
-            <label>
+            <label class="choice-pill">
                 <input type="radio" name="sufficiency" value="{{ value }}">
-                {{ value }}
+                <span>{{ value }}</span>
             </label>
         {% endfor %}
     </fieldset>
     <fieldset>
-        <legend>预测能力：根据该解释，我能更好地预测 AI 在类似情境中的未来错误。（1=极低，7=极高）</legend>
+        <legend><strong>Predictive Capability:</strong> <span class="legend-desc">The explanation helps me anticipate how the AI may behave or err in similar situations.</span></legend>
         {% for value in range(1, 8) %}
-            <label>
+            <label class="choice-pill">
                 <input type="radio" name="predictive_capability" value="{{ value }}">
-                {{ value }}
+                <span>{{ value }}</span>
             </label>
         {% endfor %}
     </fieldset>
     <fieldset>
-        <legend>可操作性：该解释明确指出若改变哪些因素，AI 有可能给出正确结果。（1=极低，7=极高）</legend>
+        <legend><strong>Actionability:</strong> <span class="legend-desc">The explanation makes it clear what changes could lead the AI to a correct result.</span></legend>
         {% for value in range(1, 8) %}
-            <label>
+            <label class="choice-pill">
                 <input type="radio" name="actionability" value="{{ value }}">
-                {{ value }}
+                <span>{{ value }}</span>
             </label>
         {% endfor %}
     </fieldset>
     <fieldset>
-        <legend>可信赖性：在阅读该解释后，我对该 AI 系统未来的可靠性更有信心。（1=极低，7=极高）</legend>
+        <legend><strong>Trustworthiness:</strong> <span class="legend-desc">After reading the explanation, I feel more confident in the AI system’s reliability.</span></legend>
         {% for value in range(1, 8) %}
-            <label>
+            <label class="choice-pill">
                 <input type="radio" name="trustworthiness" value="{{ value }}">
-                {{ value }}
+                <span>{{ value }}</span>
             </label>
         {% endfor %}
     </fieldset>
     <fieldset>
-        <legend>可归责性：该解释清楚地把错误归因于 AI 系统的局限而非其他因素。（1=极低，7=极高）</legend>
+        <legend><strong>Accountability:</strong> <span class="legend-desc">The explanation clearly attributes the error to limitations of the AI system rather than other causes.</span></legend>
         {% for value in range(1, 8) %}
-            <label>
+            <label class="choice-pill">
                 <input type="radio" name="accountability" value="{{ value }}">
-                {{ value }}
+                <span>{{ value }}</span>
             </label>
         {% endfor %}
     </fieldset>
     <fieldset>
-        <legend>满意度：我对该解释的整体质量感到满意。（1=极低，7=极高）</legend>
+        <legend><strong>Satisfaction:</strong> <span class="legend-desc">I am satisfied with the overall quality of the explanation.</span></legend>
         {% for value in range(1, 8) %}
-            <label>
+            <label class="choice-pill">
                 <input type="radio" name="satisfaction" value="{{ value }}">
-                {{ value }}
+                <span>{{ value }}</span>
             </label>
         {% endfor %}
     </fieldset>
